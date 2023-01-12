@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch')
 const path = require('path');
+const cors = require('cors')
 
 const app = express();
 var jsonParser = bodyParser.json();
@@ -9,6 +10,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.use(jsonParser);
 app.use(urlencodedParser);
+
+app.use(cors());
 
 const PORT = 3000;
 
