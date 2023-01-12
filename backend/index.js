@@ -16,6 +16,7 @@ app.use(cors());
 const PORT = 3000;
 
 app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, '../backend')));
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
